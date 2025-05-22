@@ -157,9 +157,10 @@ section.topo-do-site {
     background-color: #ffffff;
     height: 800px;
     color: #080808;
-    box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
+/*  box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
     position: relative;
     z-index: 1;
+*/    
 }
 
 section.topo-do-site .flex {
@@ -350,7 +351,6 @@ h1 .ponto_destaque {
 
 .portfolio .img-port {
     flex: 0 0 300px;
-
     height: 600px;
     object-fit: cover; /* Mantém proporção sem distorção */
     border-radius: 12px;
@@ -397,8 +397,8 @@ h1 .ponto_destaque {
 .nav-button {
     background: none;
     border: none;
-    font-size: 108px; /* Ajustei o tamanho das setas */
-    font-weight: 200;
+    font-size: 88px; /* Ajustei o tamanho das setas */
+    font-weight: 400;
     cursor: pointer;
     padding: 20px;
     color: #00bfff;
@@ -413,11 +413,11 @@ h1 .ponto_destaque {
 }
 
 .nav-button.left {
-    left: 32px;
+    left: 0px;
 }
 
 .nav-button.right {
-    right: 32px;
+    right: 0px;
 }
 /* --- SOBRE MIM --- */
 
@@ -524,10 +524,11 @@ section.formulario{
     background-color: #ffffff;
     padding: 64px 5%;
     margin-bottom: 48px 0;
-    box-shadow: 0 16px 8px rgba(197, 197, 197, 0.1); /* Sombra para baixo */
-    position: relative; /* Necessário para z-index funcionar */
-    z-index: 1; /* Garante que fique acima das outras seções */
+    box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
+    position: relative;
+    z-index: 1;
 }
+
 .formulario .titulo {
     color: #080808;
     margin-bottom: 48px;
@@ -669,6 +670,7 @@ footer p {
     background-color: transparent; /* Remove qualquer fundo do contador */
 }
 
+
 /*RESPONSIVIDADE*/
 
 @media screen and (max-width:1024px){
@@ -676,6 +678,7 @@ footer p {
     /*CLASSES GERAIS*/
     .flex{
         flex-direction: column;
+        justify-content: center;
         padding: 48px;
     }
     .titulo h2, .titulo h2 span{
@@ -713,4 +716,230 @@ footer p {
     .topo-do-site .img-topo-site img{
         width: 100%;
     }
+}
+
+/* RESPONSIVIDADE GERAL ATÉ 1024px */
+
+@media screen and (max-width: 1024px) {
+    .flex {
+        flex-direction: column;
+        padding: 32px;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .titulo h2, .titulo h2 span {
+        font-size: 32px;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    .txt_topo_site h1, 
+    .txt_topo_site .destaque, 
+    .txt_topo_site .ponto_destaque {
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center;
+    }
+
+    .txt_topo_site p {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    /* Cabeçalho */
+    .menu,
+    .btn-contato {
+        display: none;
+    }
+
+    .topo-do-site .flex {
+        gap: 20px;
+    }
+
+    .topo-do-site {
+        padding: 20px 5%;
+        text-align: center;
+    }
+
+    .topo-do-site h1 {
+        font-size: 32px;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* RESPONSIVIDADE PARA TELAS ≤768px */
+@media screen and (max-width: 768px) {
+
+    body {
+        height: auto;
+    }
+
+    .interface {
+        padding: 0 16px;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    h2.titulo,
+    h2.titulo span {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    /* Header */
+    header {
+        padding: 16px 5%;
+    }
+
+    header nav ul li {
+        display: none; /* Oculta menu */
+    }
+
+    .btn-contato {
+        display: none;
+    }
+
+    /* Topo do site */
+    section.topo-do-site {
+        padding: 32px 5%;
+        text-align: center;
+    }
+
+    .txt_topo_site {
+        max-width: 100%;
+    }
+
+    .topo-do-site h1,
+    h1 .destaque {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .topo-do-site p {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .topo-do-site .img-topo-site img {
+        max-width: 320px;
+    }
+
+    /* Especialidades */
+    .especialidades-box {
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+    }
+
+    /* Portfolio */
+
+/* ------- Tablet: até 1024px ------- */
+@media (max-width: 1024px) {
+  .img-port {
+    flex: 0 0 calc(50% - 15px); /* 2 itens com gap de 30px */
+  }
+}
+
+/* ------- Mobile: até 600px ------- */
+@media (max-width: 600px) {
+  .carrossel-track {
+    justify-content: center;
+  }
+
+  .img-port {
+    flex: 0 0 100%; /* 1 item ocupando 100% */
+    margin-right: 0;
+  }
+}
+
+    /* Sobre */
+    .sobre .flex {
+        gap: 32px;
+        text-align: center;
+    }
+
+    .sobre .txt-sobre h3,
+    .meu_nome {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .sobre .txt-sobre p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .img-sobre img {
+        width: 75%;
+    }
+
+    .sobre .btn-social button {
+        width: 44px;
+        height: 44px;
+        font-size: 24px;
+        margin: 0 4px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    gap: 10px;
+    background-color: transparent; /* Cor do fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+}
+
+footer .contador_visitas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .img-port {
+    flex: 0 0 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .img-port {
+    flex: 0 0 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .img-port {
+    flex: 0 0 150px;
+  }
+
+  .nav-button {
+    padding: 8px 10px;
+  }
 }
