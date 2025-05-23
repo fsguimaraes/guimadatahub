@@ -101,7 +101,8 @@ h2.titulo span{
 
 /* ESTILO DO CABEÇALHO*/
 header {
-    padding: 40px 5%;
+    padding: 20px 5%;
+    width: auto;
     background-color: #080808; /* Caso precise garantir */
     box-shadow: 0 16px 8px rgba(197, 197, 197, 0.1); /* Sombra para baixo */
     position: relative; /* Necessário para z-index funcionar */
@@ -118,12 +119,15 @@ header a{
     text-decoration: none;
     font-size: 18px;
     font-weight: 400;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 }
 
 header a:hover{
-    color: #00bbff;
+    color: #00bfff;
+    width: 100%;
     transform: scale(1.05);
     transition: all 0.3s ease ;
 
@@ -136,6 +140,79 @@ header nav ul li{
     padding: 0 32px;
 }
 
+/* Menu lateral */
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Começa escondido à direita */
+  width: 250px;
+  height: 100%;
+  background-color: #080808;
+  padding: 40px 40px;
+  transition: 0.4s ease;
+  z-index: 2000;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.side-menu ul li {
+  margin-bottom: 25px;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.side-menu ul li a:hover {
+  color: #00bbff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  left: 32px; /* Ícone X vai para a esquerda agora */
+  font-size: 56px;
+  cursor: pointer;
+  color: white;
+}
+
+.close-btn:hover {
+  color: #dd2020;
+  transform: rotate(360deg) scale(1.04);
+  transition: all 0.2s ease ;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    font-size: 42px;
+    cursor: pointer;
+    color: white;
+   }
+
+  .menu-icon {
+    display: block;
+    font-size: 42px;
+    cursor: pointer;
+    color: white;
+   }
+
+  .menu-icon:hover {
+    color: #00bbff;
+    transform: scale(1.04);
+    transition: all 0.2s ease ;
+    }
+}
+
 .btn-contato button:hover{
     box-shadow: 0px 0px 4px;
     color: #008b97;
@@ -145,7 +222,6 @@ header nav ul li{
 .faixa-branca {
     width: 100%;
     background-color: #494949;
-    padding: 256px 8px;
     margin-top: 24px;
     box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
     position: relative;
@@ -155,7 +231,7 @@ header nav ul li{
 section.topo-do-site {
     padding: 200px 5%;
     background-color: #ffffff;
-    height: 800px;
+    height: 900px;
     color: #080808;
 /*  box-shadow: 0px -10px 40px -10px rgba(48, 48, 48, 0.6);
     position: relative;

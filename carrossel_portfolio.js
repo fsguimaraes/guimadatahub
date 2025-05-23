@@ -22,3 +22,14 @@ btnLeft.addEventListener('click', () => {
   }
 });
 
+const menuIcon = document.getElementById('menu-icon');
+const sideMenu = document.getElementById('side-menu');
+const closeBtn = document.getElementById('close-btn');
+
+menuIcon.addEventListener('click', () => {
+  sideMenu.style.right = '0'; // Abre da direita
+});
+
+closeBtn.addEventListener('click', () => {
+  sideMenu.style.right = '-250px'; // Fecha para a direita
+});
