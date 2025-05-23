@@ -1,3 +1,5 @@
+//CARROSSEL
+
 const track = document.querySelector('.carrossel-track');
 const btnLeft = document.querySelector('.nav-button.left');
 const btnRight = document.querySelector('.nav-button.right');
@@ -22,14 +24,43 @@ btnLeft.addEventListener('click', () => {
   }
 });
 
+
+
+// FECHAMENTO MENU LATERAL
+
 const menuIcon = document.getElementById('menu-icon');
 const sideMenu = document.getElementById('side-menu');
 const closeBtn = document.getElementById('close-btn');
 
+// Abrir menu
 menuIcon.addEventListener('click', () => {
-  sideMenu.style.right = '0'; // Abre da direita
+    sideMenu.classList.add('open');
+});
+
+// Fechar menu no botão X
+closeBtn.addEventListener('click', () => {
+    sideMenu.classList.remove('open');
+});
+
+// Fechar menu quando clicar em um item
+function closeMenu() {
+    sideMenu.classList.remove('open');
+}
+
+
+//OCULTANDO ICONE DO MENU AO ABRÍ-LO
+
+menuIcon.addEventListener('click', () => {
+    sideMenu.classList.add('open');
+    menuIcon.classList.add('hidden');
 });
 
 closeBtn.addEventListener('click', () => {
-  sideMenu.style.right = '-250px'; // Fecha para a direita
+    sideMenu.classList.remove('open');
+    menuIcon.classList.remove('hidden');
 });
+
+function closeMenu() {
+    sideMenu.classList.remove('open');
+    menuIcon.classList.remove('hidden');
+}

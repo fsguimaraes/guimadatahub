@@ -24,43 +24,43 @@
         <title>Guima Data Hub</title>
 </head>
 <body>
-    <header id="topo">
-        <div class="interface">
-            <div class="logo">
-                <img src="novo_logo_guima_data_hub.png" alt="Minha logo Guima Hub Data">
-                    <span class="texto-logo">GDH</span>
-              </div>
-               <header class="header">
-                    <nav class="nav-menu">
-                        <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#especialidades">Especialidades</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        </ul>
-                    </nav>
-                    <div class="menu-icon" id="menu-icon">
-                        ☰
-                    </div>
-                    </header>
+ <header id="topo">
+    <div class="interface">
+        <div class="logo">
+            <img src="novo_logo_guima_data_hub.png" alt="Minha logo Guima Hub Data">
+            <span class="texto-logo">GDH</span>
+        </div>
 
-                    <!-- Menu lateral para mobile -->
-                    <div class="side-menu" id="side-menu">
-                    <div class="close-btn" id="close-btn">×</div>
-                    <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#especialidades">Especialidades</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#formulario">Contato</a></li>
-                    </ul>
-                    </div>
-                    <div class="btn-contato" id="#formulario">
-                        <a href="#formulario"><button>Contato</button></a>
-                    </div><!--Botão Contato-->
-        </div><!--Fim interface-->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
 
-    </header>
+        <div class="btn-contato">
+            <a href="#formulario"><button>Contato</button></a>
+        </div>
+
+        <div class="menu-icon" id="menu-icon">
+            ☰
+        </div>
+
+        <!-- Menu lateral para mobile -->
+        <div class="side-menu" id="side-menu">
+            <div class="close-btn" id="close-btn">×</div>
+            <ul>
+                <li><a href="#home" onclick="closeMenu()">Início</a></li>
+                <li><a href="#especialidades" onclick="closeMenu()">Especialidades</a></li>
+                <li><a href="#portfolio" onclick="closeMenu()">Portfólio</a></li>
+                <li><a href="#sobre" onclick="closeMenu()">Sobre</a></li>
+                <li><a href="#formulario" onclick="closeMenu()">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
     <main>
         <section class="topo-do-site" id="inicio">
             <div class="interface">
@@ -307,9 +307,7 @@
           <div class="logo-texto">
             <img src="novo_logo_guima_data_hub.png" alt="Guima Data Hub" class="src">
             <span class="texto-logo">GDH</span>
-            <h2>www.guimadatahub.com</h2>
-            <h2>© 2025 Fellipe Guimarães</h2>
-            <h2>Todos os direitos reservados</h2>
+            <h2>Todos os direitos reservados  •  © 2025 Fellipe Guimarães</h2>
           </div>
         </div>
       </div>
@@ -323,17 +321,17 @@
 <body>
   <!-- Conteúdo do site aqui -->
 
-  <footer>
-    <div class="contador_visitas"></div> 
-        <p>Visitas no site:</p>
-        <!-- Contador de visitas -->
-        <a href="https://www.hitwebcounter.com" target="_blank">
+<footer>
+  <div class="contador_visitas">
+      <p>Visitas no site:</p>
+      <!-- Contador de visitas -->
+      <a href="https://www.hitwebcounter.com" target="_blank">
         <img src="https://hitwebcounter.com/counter/counter.php?page=1234567&style=0006&nbdigits=5&type=page&initCount=0" 
             title="Contador de visitas" 
             alt="web counter"  
             border="0"/>
-        </a>
-    </div>    
-  </footer>
+      </a>
+  </div>    
+</footer>
 </body>
 </html>

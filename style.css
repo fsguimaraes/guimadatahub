@@ -140,54 +140,64 @@ header nav ul li{
     padding: 0 32px;
 }
 
-/* Menu lateral */
+/* Menu lateral - linha 143*/
 
 .side-menu {
-  position: fixed;
-  top: 0;
-  right: -250px; /* Começa escondido à direita */
-  width: 250px;
-  height: 100%;
-  background-color: #080808;
-  padding: 40px 40px;
-  transition: 0.4s ease;
-  z-index: 2000;
+    position: fixed;
+    top: 64px;
+    right: -250px;
+    width: 250px;
+    height: 320px;
+    background-color: #080808;
+    transition: right 0.3s;
+    padding: 32px;
+    z-index: 999;
+}
+
+.side-menu.open {
+    right: 0;
 }
 
 .side-menu ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 60px;
+    list-style: none;
+    padding: 0;
 }
 
 .side-menu ul li {
-  margin-bottom: 25px;
+    margin: 20px 0;
 }
 
 .side-menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: 0.3s;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .side-menu ul li a:hover {
-  color: #00bbff;
+    color: #00bfff;
+    width: 100%;
+    transform: scale(1.05);
+    transition: all 0.3s ease ;
 }
 
 .close-btn {
-  position: absolute;
-  top: 15px;
-  left: 32px; /* Ícone X vai para a esquerda agora */
-  font-size: 56px;
-  cursor: pointer;
-  color: white;
+    position: absolute;
+    top: -60px;
+    left: 24px; /* Ícone X vai para a esquerda agora */
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+    text-align: right;
 }
 
 .close-btn:hover {
   color: #dd2020;
-  transform: rotate(360deg) scale(1.04);
+  transform: rotate(90deg) scale(1.04);
   transition: all 0.2s ease ;
+}/*linha 197*/
+
+.menu-icon.hidden {
+    display: none;
 }
 
 /* Responsividade */
@@ -203,7 +213,7 @@ header nav ul li{
     display: block;
     font-size: 42px;
     cursor: pointer;
-    color: white;
+    color: #fff;
    }
 
   .menu-icon:hover {
@@ -211,6 +221,10 @@ header nav ul li{
     transform: scale(1.04);
     transition: all 0.2s ease ;
     }
+
+  .menu-icon.hidden {
+    display: none;
+}
 }
 
 .btn-contato button:hover{
@@ -676,7 +690,7 @@ form .btn-enviar input:hover{
 /*ESTILO RODAPÉ*/
 
 footer {
-  padding: 48px 5%;
+  padding: 32px 4%;
   background-color: #080808;
 /*color: rgba(255, 255, 255, 0.6);*/
   font-size: 12px;
@@ -727,7 +741,7 @@ footer {
     color: #ffffff; /* Cor do texto */
     text-align: center;
     padding: 8px;
-    margin-top: 32px;
+    margin-top: 12px;
 }
 
 footer p {
@@ -735,7 +749,7 @@ footer p {
 }
 
 .contador_visitas {
-    margin: 0;
+    margin: 8px;
     background-color: transparent; /* Fundo transparente */
     display: flex;
     align-items: center;
@@ -975,7 +989,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px 16px;
+    padding: 16px 12px;
     gap: 10px;
     background-color: transparent; /* Cor do fundo */
     color: #fff; /* Cor do texto */
