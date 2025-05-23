@@ -934,7 +934,7 @@ footer p {
   }
 
   .img-port {
-    flex: 0 0 100%; /* 1 item ocupando 100% */
+    flex: 0 0 80%; /* 1 item ocupando 100% */
     margin-right: 0;
   }
 }
